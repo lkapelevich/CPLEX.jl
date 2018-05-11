@@ -281,7 +281,10 @@ const status_symbols = Dict(
     118 => :CPXMIP_UNBOUNDED,
     119 => :CPXMIP_INForUNBD,
     120 => :CPXMIP_FEASIBLE_RELAXED,
-    121 => :CPXMIP_OPTIMAL_RELAXED
+    121 => :CPXMIP_OPTIMAL_RELAXED,
+    131 => :CPXMIP_DETTIME_LIM_FEAS,
+    132 => :CPXMIP_DETTIME_LIM_INFEAS,
+    133 => :CPXMIP_ABORT_RELAXATION_UNBOUNDED
 )
 
 get_status(model::Model) = status_symbols[Int(get_status_code(model))]::Symbol
